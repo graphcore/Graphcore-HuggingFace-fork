@@ -12,6 +12,7 @@
 # 5: Folder in which to save/look for tar.gz report archives
 # 6: Examples utils spec file to process
 # 7: Huggingface token
+# 8: Benchmark to test 
 
 upload_report() {
     # Uploads files to a gradient dataset
