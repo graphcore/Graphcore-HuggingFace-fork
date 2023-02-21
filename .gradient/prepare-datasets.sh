@@ -46,6 +46,7 @@ symlink-public-resources "${PUBLIC_DATASET_DIR}/dfki-sentinel-eurosat" "${DATASE
 python -m pip install "optimum-graphcore>=0.5, <0.6"
 
 echo "Finished running setup.sh."
+echo ${@}
 # Run automated test if specified
 if [[ "$1" == "test" ]]; then
     #source .gradient/automated-test.sh "${@:2}"

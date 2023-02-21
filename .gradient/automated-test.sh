@@ -44,6 +44,7 @@ run_tests(){
     cd /notebooks/
     if [ -z $BENCHMARK ]
     then
+        echo "Running all tests"
         python -m examples_utils platform_assessment --spec ${TEST_CONFIG_FILE} \
         --ignore-errors \
         --log-dir $LOG_FOLDER \
@@ -51,6 +52,7 @@ run_tests(){
         --cloning-directory /tmp/clones \
         --additional-metrics
     else
+        echo "Running only the ${BENCHMARK} test"
         python -m examples_utils platform_assessment --spec ${TEST_CONFIG_FILE} \
             --benchmark $BENCHMARK \
             --ignore-errors \
