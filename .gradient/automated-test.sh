@@ -73,6 +73,7 @@ then
     upload_report ${@}
 else
     echo "Running tests"
+    echo ${@}
     run_tests ${@}
 fi
 # Make the notebook stop itself
