@@ -44,7 +44,7 @@ run_tests(){
     if [ -z "$BENCHMARK" ]
     then
         python -m examples_utils platform_assessment --spec ${TEST_CONFIG_FILE} \
-            --benchmark ${BENCHMARK} \
+            --benchmark $BENCHMARK \
             --ignore-errors \
             --log-dir $LOG_FOLDER \
             --gc-monitor \
