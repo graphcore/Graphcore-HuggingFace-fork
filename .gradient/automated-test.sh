@@ -40,12 +40,23 @@ run_tests(){
     TEST_CONFIG_FILE="${6}"
     mkdir -p ${LOG_FOLDER}
     cd /notebooks/
-    python -m examples_utils platform_assessment --spec ${TEST_CONFIG_FILE} \
+    if [ -z "$BENCHMARK" ]
+    then
+        python -m examples_utils platform_assessment --spec ${TEST_CONFIG_FILE} \
+            --benchmark ${BENCHMARK} \
+            --ignore-errors \
+            --log-dir $LOG_FOLDER \
+            --gc-monitor \
+            --cloning-directory /tmp/clones \
+            --additional-metrics
+    else
+        python -m examples_utils platform_assessment --spec ${TEST_CONFIG_FILE} \
         --ignore-errors \
         --log-dir $LOG_FOLDER \
         --gc-monitor \
         --cloning-directory /tmp/clones \
         --additional-metrics
+    
 
     tar -czvf "${LOG_FOLDER}.tar.gz" ${LOG_FOLDER}
     echo "PAPERSPACE-AUTOMATED-TESTING: Testing complete"
