@@ -48,7 +48,7 @@ python -m pip install "optimum-graphcore>=0.5, <0.6"
 echo "Finished running setup.sh."
 echo ${@}
 echo "wheres my VAR" 
-echo $3 $4 $5 $6 $7 $8 ${9} $10
+echo $3 $4 $5 $6 $7 $8 "${9}" $10
 # Run automated test if specified
 if [[ "$1" == "test" ]]; then
     #source .gradient/automated-test.sh "${@:2}"
