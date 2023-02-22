@@ -40,6 +40,10 @@ run_tests(){
     LOG_FOLDER="${5}/log_${4}_$(date +'%Y-%m-%d-%H_%M_%S')"
     TEST_CONFIG_FILE="${6}"
     BENCHMARK="${8}"
+    echo "Var 8 1"
+    echo ${8}
+    echo "Var 8 2 - benchmark"
+    echo $BENCHMARK
     mkdir -p ${LOG_FOLDER}
     cd /notebooks/
     if [ -z $BENCHMARK ]
@@ -77,6 +81,8 @@ then
 else
     echo "Running tests"
     echo ${@}
+    echo "Running variable 8 (0)"
+    echo ${8}
     run_tests ${@}
 fi
 # Make the notebook stop itself
