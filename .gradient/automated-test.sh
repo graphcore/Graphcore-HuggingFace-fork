@@ -39,16 +39,10 @@ run_tests(){
     export VIRTUAL_ENV="/some/fake/venv/GC-automated-paperspace-test-${4}"
     LOG_FOLDER="${5}/log_${4}_$(date +'%Y-%m-%d-%H_%M_%S')"
     TEST_CONFIG_FILE="${6}"
-    BENCHMARK="${8}"
-    echo "Var 8 1"
-    echo ${8}
-    echo "Var 8 2 - benchmark"
-    echo $BENCHMARK
     mkdir -p ${LOG_FOLDER}
-    cd /notebooks/
-    if [ -z $BENCHMARK ]
+    if ${9} == "--benchmark"
     then
-        echo "Running all tests"
+    echo "Running all tests"
         python -m examples_utils platform_assessment --spec ${TEST_CONFIG_FILE} \
         --ignore-errors \
         --log-dir $LOG_FOLDER \
@@ -56,14 +50,15 @@ run_tests(){
         --cloning-directory /tmp/clones \
         --additional-metrics
     else
-        echo "Running only the ${BENCHMARK} test"
+        echo "Running only the ${10} test"
         python -m examples_utils platform_assessment --spec ${TEST_CONFIG_FILE} \
-            --benchmark $BENCHMARK \
+            --benchmark ${10} \
             --ignore-errors \
             --log-dir $LOG_FOLDER \
             --gc-monitor \
             --cloning-directory /tmp/clones \
             --additional-metrics
+        
     fi
     tar -czvf "${LOG_FOLDER}.tar.gz" ${LOG_FOLDER}
     echo "PAPERSPACE-AUTOMATED-TESTING: Testing complete"
@@ -81,8 +76,6 @@ then
 else
     echo "Running tests"
     echo ${@}
-    echo "Running variable 8 (0)"
-    echo ${8}
     run_tests ${@}
 fi
 # Make the notebook stop itself

@@ -1,4 +1,8 @@
 #!/bin/bash
+echo "Finished running setup.sh."
+echo ${@}
+echo "wheres my VAR" 
+echo "${@:2}"
 
 symlink-public-resources() {
     public_source_dir=${1}
