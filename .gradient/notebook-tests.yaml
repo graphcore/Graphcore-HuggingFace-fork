@@ -135,24 +135,6 @@ stable-diffusion-text_to_image_sd2:
     timeout: 3000
   requirements_file: requirements.txt
 
-
-# Audio processing
-audio-processing-wav2vec2-fine-tuning-checkpoint:
-  location: ../audio-processing
-  generated: true
-  notebook:
-    file: wav2vec2-fine-tuning-checkpoint.ipynb
-    timeout: 10000
-  requirements_file: requirements.txt
-
-audio-processing-wav2vec2-inference-checkpoint:
-  location: ../audio-processing
-  generated: true
-  notebook:
-    file: wav2vec2-inference-checkpoint.ipynb
-    timeout: 10000
-  requirements_file: requirements.txt
-
 # Removed due to silent failure
 # audio-processing-audio_classification:
 #   location: ../audio-processing
@@ -178,25 +160,6 @@ useful-managing-ipu-resources:
     file: managing_ipu_resources.ipynb
     timeout: 1000
 
-#GPTJ - fine-tuning
-gptj-finetuning:
-  location: ../gptj-text-generation
-  generated: true
-  notebook:
-    file: finetuning.ipynb
-    timeout: 15000
-  requirements_file: requirements.txt
-
-#GPTJ - inference
-gptj-generative-inference:
-  location: ../gptj-text-generation
-  generated: true
-  notebook:
-    file: GPTJ-generative-inference.ipynb
-    timeout: 3600
-  requirements_file: requirements.txt
-
-
 packed-bert-multi-label-classification:
   location: ../packed-bert
   generated: true
@@ -219,3 +182,38 @@ packed-bert-single-label-classification:
   notebook:
     file: packedBERT_single_label_text_classification.ipynb
     timeout: 10000
+
+# Audio processing
+audio-processing-wav2vec2-fine-tuning-checkpoint:
+  location: ../audio-processing
+  generated: true
+  notebook:
+    file: wav2vec2-fine-tuning-checkpoint.ipynb
+    timeout: 10000
+  requirements_file: requirements.txt
+
+audio-processing-wav2vec2-inference-checkpoint:
+  location: ../audio-processing
+  generated: true
+  notebook:
+    file: wav2vec2-inference-checkpoint.ipynb
+    timeout: 10000
+  requirements_file: requirements.txt
+
+#GPTJ - inference
+gptj-generative-inference:
+  location: ../gptj-text-generation
+  generated: true
+  notebook:
+    file: GPTJ-generative-inference.ipynb
+    timeout: 3600
+  requirements_file: requirements.txt
+
+#GPTJ - fine-tuning
+gptj-finetuning:
+  location: ../gptj-text-generation
+  generated: true
+  notebook:
+    file: finetuning.ipynb
+    timeout: 15000
+  requirements_file: requirements.txt
