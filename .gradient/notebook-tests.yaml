@@ -103,29 +103,29 @@
 #     timeout: 10000
 
 # # Stable diffusion
-# stable-diffusion-image_to_image:
-#   location: ../stable-diffusion
-#   generated: true
-#   notebook:
-#     file: image_to_image.ipynb
-#     timeout: 3000
-#   requirements_file: requirements.txt
+stable-diffusion-image_to_image:
+  location: ../stable-diffusion
+  generated: true
+  notebook:
+    file: image_to_image.ipynb
+    timeout: 3000
+  requirements_file: requirements.txt
 
-# stable-diffusion-inpainting:
-#   location: ../stable-diffusion
-#   generated: true
-#   notebook:
-#     file: inpainting.ipynb
-#     timeout: 3000
-#   requirements_file: requirements.txt
+stable-diffusion-inpainting:
+  location: ../stable-diffusion
+  generated: true
+  notebook:
+    file: inpainting.ipynb
+    timeout: 3000
+  requirements_file: requirements.txt
 
-# stable-diffusion-text_to_image:
-#   location: ../stable-diffusion
-#   generated: true
-#   notebook:
-#     file: text_to_image.ipynb
-#     timeout: 3000
-#   requirements_file: requirements.txt
+stable-diffusion-text_to_image:
+  location: ../stable-diffusion
+  generated: true
+  notebook:
+    file: text_to_image.ipynb
+    timeout: 3000
+  requirements_file: requirements.txt
 
 stable-diffusion-text_to_image_sd2:
   location: ../stable-diffusion
