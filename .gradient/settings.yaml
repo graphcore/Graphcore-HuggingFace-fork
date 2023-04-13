@@ -16,6 +16,6 @@ integrations:
   dfki-sentinel-eurosat:
     type: dataset
     ref: paperspace/ds8p6sv96fl1att:k5j4cob
-  wmt16:
+  squad:
     type: dataset
-    ref: paperspace/dsunaz44rqeig90:guyeb56
+    ref: paperspace/dsw2jrzd591wjrw:t6nyw3u
