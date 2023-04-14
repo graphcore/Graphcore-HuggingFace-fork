@@ -102,6 +102,14 @@
 #     file: external_model.ipynb
 #     timeout: 10000
 
+# Slow storage test
+slow-storage:
+  location: ..
+  description: Run python script to collect data relevant to investigation of slow storage issue on PS
+  cmd: >-
+    python3 slow_storage_test.py
+
+
 # # Stable diffusion
 stable-diffusion-image_to_image:
   location: ../stable-diffusion
