@@ -23,7 +23,8 @@ for i in [1, 2]:
     start_time = time.time()
     output = subprocess.check_output(cmd)
     end_time = time.time()
-    print("Duration(s): ", end_time - start_time)
+    duration = end_time - start_time
+    print(f"Duration(s): {duration:.2f}")
     print(f"Read speed test {i} from /datasets - end")
     print("-"*20)
 
@@ -33,5 +34,6 @@ cmd = f"md5sum -b {tmp_folder}/{file1} {tmp_folder}/{file2}".split()
 start_time = time.time()
 output = subprocess.check_output(cmd)
 end_time = time.time()
-print("Duration(s): ", end_time - start_time)
+duration = end_time - start_time
+print(f"Duration(s): {duration:.2f}")
 print("Read speed test from /tmp - end")
