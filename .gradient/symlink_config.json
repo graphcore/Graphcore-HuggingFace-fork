@@ -1,4 +1,4 @@
 {
     "${POPLAR_EXECUTABLE_CACHE_DIR}":["${PUBLIC_DATASETS_DIR}/poplar-executables-hf-3-2"],
-    "${POPLAR_EXECUTABLE_CACHE_DIR}/stablediffusion2_text2img":["${PUBLIC_DATASETS_DIR}/custom_popart_sd2_cache"]
+    "${POPLAR_EXECUTABLE_CACHE_DIR}/stablediffusion2_text2img":["${PUBLIC_DATASETS_DIR}/poplar-executables-hf-3-2/stablediffusion2_text2img", "${PUBLIC_DATASETS_DIR}/custom_popart_sd2_cache"]
 }
