@@ -45,6 +45,7 @@ export HF_DATASETS_CACHE="/tmp/huggingface_caches/datasets"
 export POPTORCH_CACHE_DIR="${POPLAR_EXECUTABLE_CACHE_DIR}"
 export POPTORCH_LOG_LEVEL=ERR
 export RDMAV_FORK_SAFE=1
+export POPART_PRELOAD_POPEF=full-preload
 
 # source custom popart build. Since it was build in a local pod, this will set some env vars like PATH to
 # have the wrong values, so they are modified below
