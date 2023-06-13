@@ -11,8 +11,7 @@ fi
 mkdir -p ${PERSISTENT_CHECKPOINT_DIR}
 
 echo "Starting preparation of datasets"
-/notebooks/.gradient/symlink_datasets_and_caches.py
-
+python -m pip install boto3
 
 echo "Finished running setup.sh."
 # Run automated test if specified
