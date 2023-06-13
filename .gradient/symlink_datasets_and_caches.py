@@ -242,7 +242,15 @@ def parse_args():
 
 if __name__ == "__main__":
     args = parse_args()
+    try:
+        print("Starting disk usage \n", subprocess.check_output(["df", "-h"]).decode())
+    except:
+        pass
     if args.gradient_dataset:
         main(args)
     else:
         main_s3(args)
+    try:
+        print("Final disk usage \n", subprocess.check_output(["df", "-h"]).decode())
+    except:
+        pass
